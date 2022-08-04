@@ -1,0 +1,74 @@
+h1{
+  text-align: center;
+  font-family: cursive;
+  color: whitesmoke;
+  padding-top: 10px;
+
+}
+
+h2{
+  font-family: cursive;
+}
+#form_container
+{
+	padding:15px 15px;
+	margin-top:150px;
+	background: rgba(0,0,0,0.5);	
+	color:#fff;
+  border-radius: 10px;
+  margin-left: 280px;
+}
+body
+{
+  
+	background-image: url("../../assets/images/bg.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+  height: 750px;
+
+}
+.upload-btn-wrapper 
+{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] 
+{
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.button{
+  background: linear-gradient(
+135deg
+, #e623d5 0%, #13afaf 100%);
+  padding: 15px;
+  font-family: cursive;
+  margin-left: 80px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-top: 10px;
+  width: 100px;
+  letter-spacing: .11rem;
+  outline:none;
+}
+
+.button:hover
+{
+transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px #38373785;
+cursor: pointer;
+}
+
+#btn{
+  margin-left: 20px;
+}
+

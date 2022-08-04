@@ -1,0 +1,83 @@
+
+body{
+  background-image: url(../../assets/images/bgg.jpg);
+  
+  background-size: cover;
+  height: 910px;
+}
+form{
+  opacity: 0.7;
+  background-color: black;
+  margin-right: 4vw;
+  border-radius: 20px;
+  margin-left: 19vw;
+}
+h1,h2{
+  text-align: center;
+  padding: 13px;
+  color: darkorange;
+  font-family: cursive;
+}
+
+.form-label{
+  display:block;
+  
+  margin:0 auto;
+}
+
+.was-validated{
+  padding: 20px 0;
+padding-left: 20px;
+}
+#fname{
+  color: white;
+  font-family: cursive;
+  font-size: larger;
+  float: left;
+}
+
+#logo{
+  float: left;
+  width: 140px;
+  height: 140px;
+}
+
+#btn1 , #btn2{
+  background-color: orange;
+  font-size: 24px;
+  font-family: cursive;
+  color:black;
+  margin-top: 10px;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#btn2{
+  margin-left: 10px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

@@ -1,0 +1,111 @@
+
+.body {
+  
+  font: 18px Helvetica, sans-serif;
+  font-family: cursive;
+  color: white;
+  background-image: url("../../assets/images/tbg.jpg");
+  background-size: cover;
+  background-position:center;
+}
+
+#logo{
+  float: left;
+  width: 180px;
+  height: 180px;
+}
+
+.table{
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  margin-left: 0px;
+}
+
+img{
+  width: 20%;
+  align-self: center;
+}
+
+.align-contents{
+  
+  width: 100%;
+}
+
+td{
+  border-top: 0px;
+  color: #FFFFFF;
+}
+font{
+  color: #FFFFFF;
+  font-size: 4vw;
+}
+.welcome{
+  color: white;
+}
+
+label {
+  font: bold 20px Helvetica, sans-serif;
+  display: block;
+  float: left;
+  text-align: right;
+  padding: 5px 10px 0 0;
+  width: 140px;
+}
+
+form div {
+  overflow: hidden;
+  margin: 0 0 5px 0;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button{
+  background: linear-gradient(
+135deg
+, #753370 0%, #076868 100%);
+  padding: 15px;
+  font-family: cursive;
+  margin-left: 0px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  top: 40px;
+  width: 200px;
+  letter-spacing: .11rem;
+  outline:none;
+}
+
+.button:hover
+{
+transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px #38373785;
+cursor: pointer;
+}
+
+#btn{
+  margin-left: 20px;
+}
+
+.card{
+  height: 585px;
+  background-image: url("../../assets/images/card.webp");
+  background-size: cover;
+}

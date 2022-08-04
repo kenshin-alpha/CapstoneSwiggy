@@ -1,0 +1,45 @@
+
+
+
+<link rel="stylesheet" href="merchant-menu.component.css">
+<body>
+<div class="body">
+  <br><br>
+  <h1>Swiggy | Menu</h1>
+  <br><br>
+
+
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && getTotal()" novalidate class="feedback-form">
+  <div class="container-fluid" style="margin: 0 auto; width: 75%;">
+    <div class="row">
+      <div class="card-deck" *ngFor="let m of model; let index=index" style="padding-right: 3px">
+        <div class="card" style="width: 18rem;">
+          <!--<img class="card-img-top zoom" src="{{m.url}}" alt="{{m.item}}"  style="height: 190px">-->
+          <img class="card-img-top zoom" [src]="_DomSanitizationService.bypassSecurityTrustUrl(m.url)" style="height: 190px"/>
+          <div class="card-block">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black">{{m.item}}</h5>
+              <p class="card-text">Price : Rs.{{m.price}}</p>
+              <p> Quantity Available : {{m.quantity}}</p>
+            </div>
+          </div>
+        </div>
+        <input class="input-group-text input-align" type="number" name="name+{{index}}" min="0" max="{{model[index].quantity}}" value="{{values[index].quantity}}" [(ngModel)]="values[index].quantity">
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="container" align="center">
+
+    <button  routerLink="/addItem" class="button" >Add Item</button>
+    <select class="button" (change)="update($event)" ><span>Delete Item</span>
+      <option value="" style="color: black;">Select One</option>
+      <option *ngFor="let m of model; let index=index" style="color: black;" [value]="m.id">{{m.item}}</option>
+    </select>
+    <button id="btn" (click) = "deleteItem()" class="button">Delete Item</button>
+    <button type="submit" id="btn" class="button">Update Quantity</button>
+    <button id="btn" routerLink="/home" type="button" (click)="clearLocal()" class="button">Logout</button>
+  </div>
+</form>
+</div>
+</body>

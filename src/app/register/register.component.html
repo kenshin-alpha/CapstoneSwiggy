@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="register.component.css">
+  <title>Registration</title>
+</head>
+
+<body>
+  <header>
+    <div class="main">
+      <div class="logo">
+        <img id="logo" src="../../assets/images/logo.svg">
+      </div>
+    </div>
+    <h1>Swiggy</h1>
+    <h2>Registration</h2>
+  </header>
+
+  <form class="was-validated">
+    <form class="row g-3" name="form" #f="ngForm" (ngSubmit)="registerUser()" novalidate class="feedback-form">
+      <div class="offset-3"></div>
+      <div *ngIf="present" class="alert alert-danger alert-box" align="center" style="width: 75%; margin: auto;">
+        <strong>UserName Already Taken!</strong>
+      </div>
+      <div *ngIf="present==false" class="alert alert-success alert-box" align="center" style="width: 75%; margin: auto;">
+        <strong>UserName Available!</strong>
+      </div>
+      <div class="col-md-5">
+        <tr>
+          <td style="text-align: center"> <label id="fname"for="username">Username</label>
+            <input type="text"
+                     id="username"
+                     class="form-control is-invalid"
+                     name="username"
+                     placeholder="Your Username"
+                     [(ngModel)]="model.username"
+                     #username="ngModel"
+                     [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
+                     required="required"/></td>
+          <td>
+            <div class="container" align="center">
+              <a (click)="usernamePresent()" data-toggle="tooltip" data-placement="right" title="Click to check availability"><img src="../../assets/images/checkAvailability.png" style="height: 25px;width: 25px"></a>
+            </div>
+          </td>
+
+        </tr>
+
+      </div>
+      <div class="col-md-5">
+        <tr>
+          <td><label id="fname" for="password">Password</label>
+            <input (keyup)="passwordStrength()" type="password"
+                     id="password"
+                     class="form-control is-invalid"
+                     name="password"
+                     placeholder="Your Password"
+                     [(ngModel)]="model.password"
+                     #password="ngModel"
+                     minlength="8"
+                     maxlength="16"
+                     [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+                     required="required"/></td>
+          <td style="width: 58px; height: 35px; vertical-align: bottom" align="center"><a *ngIf="!passwordValidation" class="password" data-toggle="tooltip" data-placement="right" title="Your Password should contain : &#013; 1 special character &#013; 1 Upper Case character &#013; 1 Numeric character &#013; Minumum Length = 8 &#013; Maximum length = 16"><img src="../../assets/images/key.png" style="width: 30px; height: 30px"></a> </td>
+        </tr>
+      </div>
+      <div class="col-md-5">
+        <tr>
+          <td><label id="fname" for="firstname">First name</label>
+            <input type="text"
+                     id="firstname"
+                     class="form-control is-invalid"
+                     name="firstname"
+                     placeholder="Your Firstname"
+                     [(ngModel)]="model.firstname"
+                     #firstname="ngModel"
+                     [ngClass]="{ 'is-invalid': f.submitted && firstname.invalid }"
+                     required="required"/></td>
+          <td></td>
+        </tr>
+
+      </div>
+      <div class="col-md-5">
+        <tr>
+          <td><label id="fname" for="lastname">Last Name</label>
+            <input type="text"
+                     id="lastname"
+                     class="form-control is-invalid"
+                     name="lastname"
+                     placeholder="Your Lastname"
+                     [(ngModel)]="model.lastname"
+                     #lastname="ngModel"
+                     [ngClass]="{ 'is-invalid': f.submitted && lastname.invalid }"
+                     required="required"/></td>
+          <td></td>
+        </tr>
+      </div>
+      <div class="col-md-5">
+        <tr>
+          <td><label id="fname" for="email">Email</label>
+            <input (keyup)="checkEmail()"
+                     type="text"
+                     id="email"
+                     class="form-control is-invalid"
+                     name="email"
+                     placeholder="email"
+                     [(ngModel)]="model.email"
+                     #email="ngModel"
+                     [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                     required="required"/></td>
+          <td><a *ngIf="!emailValidation" data-toggle="tooltip" data-placement="right" title="Enter a valid Email Address">Not a valid email</a></td>
+        </tr>
+      </div>
+      <div class="col-md-5">
+        <tr>
+          <td><label id="fname" for="address">Address</label>
+            <input type="text"
+                     id="address"
+                     class="form-control is-invalid"
+                     name="address"
+                     placeholder="address"
+                     [(ngModel)]="model.address"
+                     #address="ngModel"
+                     [ngClass]="{ 'is-invalid': f.submitted && address.invalid }"
+                     required="required"/></td>
+          <td></td>
+        </tr>
+      </div>
+
+      <div class="col-md-5">
+        <tr>
+          <td><label id="fname" for="phone">Phone</label>
+            <input 
+                     type="text"
+                     id="phone"
+                     class="form-control is-invalid"
+                     name="phone"
+                     placeholder="phone"
+                     [(ngModel)]="model.phone"
+                     #phone="ngModel"
+                     [ngClass]="{ 'is-invalid': f.submitted && phone.invalid }"
+                     maxlength="10"
+                     minlength="10"
+                     required="required"/></td>
+          <td>
+            <a *ngIf="!phoneValidation" data-toggle="tooltip" data-placement="right" title="Enter a valid Phone Number">Invalid Phone Number</a>
+          </td>
+        </tr>
+      </div>
+      
+      <div class="col-md-5">
+        <tr>
+          <td><label id="fname" >Account</label>
+          <select class="form-select" 
+          [(ngModel)]="options"
+          name="options" id="validationCustom04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>User</option>
+            <option>Merchant</option>
+          </select></td>
+        </tr>
+      </div>
+      
+
+      <div class="w3-show-inline-block">
+        <div class="w3-bar">
+          <tr>
+            <td><button id="btn1" type="submit" class="button">
+              <span> Register</span></button>
+            </td>
+            <td><button id="btn2" routerLink="/home" class="button"><span>Home</span></button> </td>
+          </tr>
+        </div>
+      </div>
+    </form>
+  </form>
+</body>
+
+</html>

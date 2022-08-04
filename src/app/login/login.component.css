@@ -1,0 +1,82 @@
+body{
+  background-image: url(../../assets/images/bg1.jpg);
+  height: 870px;
+  background-size: cover;
+}
+
+form{
+  opacity: 0.7;
+  background-color: black;
+  margin-right: 10vw;
+  border-radius: 25px;
+  margin-left: 160px;
+  top: 25%;
+  padding: 10px;
+}
+
+h1{
+  text-align: center;
+  padding: 40px;
+  color: darkorange;
+  font-family: cursive;
+}
+
+.form-label{
+  display:block;
+  margin:0 auto;
+}
+
+.was-validated{
+  padding: 20px 0;
+padding-left: 220px;
+}
+#fname{
+  color: white;
+  font-family: cursive;
+  font-size: larger;
+}
+
+#logo{
+  float: left;
+  width: 140px;
+  height: 140px;
+}
+
+#btn1 , #btn2{
+  background-color: orange;
+  font-size: 24px;
+  margin-left: 13px;
+  font-family: cursive;
+  color:black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#btn2{
+  margin-left: 10px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

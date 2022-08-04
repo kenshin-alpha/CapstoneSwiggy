@@ -1,0 +1,40 @@
+
+ <link rel="stylesheet" href="success.component.css">
+
+ <div class="body">
+   <br><br>
+   <img id="img" src="../../assets/images/logo.svg">
+   <h1 style="text-align: center; color: darkorange; font-size: 40px;">SWIGGY | ORDERS</h1>
+   <br><br>
+   <div class="alert1 alert-warning1" align="center" style="width: 100%">
+     Payment Successful
+   </div>
+   <br><br><br>
+   <h1 style="margin-left: 180px;">Your order is on it's way</h1>
+   <!--<div align="center"><progress value="22" max="100" style="width: 70%"> Progress</progress> </div>-->
+ <br><br><br>
+ <div align="center">
+   <div class="progress1">
+     <div style="width:40%;">
+       Payment Status : Accepted
+     </div>
+     <div style="width:40%">
+       Order Status : Accepted
+     </div>
+     <div style="width:40%">
+       Delivery Time : 30 mins
+     </div>
+   </div>
+ </div>
+ 
+ 
+   <br><br><br><br>
+   <table align="center">
+     <tr>
+       <td><button class="button" routerLink="/contactUs" style="width: 140px"><span>Contact Us</span></button> </td>
+       <td><button class="button" routerLink="/menu"><span>Menu</span></button> </td>
+       <td><button class="button" routerLink="/home" (click)="clearLocal()"><span>Log Out</span></button> </td>
+     </tr>
+   </table>
+ </div>
+ 

@@ -1,0 +1,101 @@
+
+ .body {
+  height: -webkit-fill-available;
+  background-image: url("../../assets/images/bg7.webp");
+  color: white;
+  font: 14px Helvetica, sans-serif;
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  color: darkorange;
+  font-family: cursive;
+}
+
+label {
+  font: bold 20px Helvetica, sans-serif;
+  display: block;
+  float: left;
+  text-align: right;
+  padding: 5px 10px 0 0;
+  width: 140px;
+}
+input{
+  width: -webkit-fill-available;
+  padding: inherit;
+}
+form div {
+  overflow: hidden;
+  margin: 0 0 5px 0;
+}
+
+body{
+  background-color: rgb(24, 23, 23);
+}
+
+.total{
+  font-family: cursive;
+}
+
+.dec {
+  background-position: 0 -29px;
+}
+
+.buttons {
+  padding: 20px 0 0 140px;
+}
+
+.button{
+  background: linear-gradient(
+135deg
+, #202020 0%, #ff0101 100%);
+  padding: 15px;
+  font-family: cursive;
+  margin-left: 80px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 190px;
+  letter-spacing: .11rem;
+  outline:none;
+}
+
+.button:hover
+{
+transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px #38373785;
+cursor: pointer;
+}
+
+#btn{
+  margin-left: 20px;
+}
+
+
+.bigbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
+
+p{
+  color: black;
+  font-family: cursive;
+}
+
+.input-align{
+  text-align: center;
+}
+
+

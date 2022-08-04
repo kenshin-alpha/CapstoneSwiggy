@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" href="merchant-welcome.component.css">
+<body>
+  <div class="main">
+    <div class="logo">
+        <img id="logo" src="../../assets/images/logo.svg">
+    </div>
+</div>
+<div class="body">
+  <br><br><br>
+  <h1 align="center">SWIGGY | HOME</h1>
+  <br><br>
+
+<div class="card align-contents" align="center">
+  <img class="card-img-top" style="padding: 0 5px; float: left;" src="../../assets/images/merchant.jpg" alt="Card image cap">
+    <p><font style="text-align: center; font-size: x-large;">Welcome, {{modelMerchant.firstname}}<br> Account Type : Merchant</font></p>
+  <div class="table-responsive panel">
+    <table class="table">
+      
+      <tbody>
+      <tr>
+        <td class="text-success" align="right"><i class="fa fa-user"></i> First Name</td>
+        <td>{{modelMerchant.firstname}}</td>
+      </tr>
+      <tr>
+        <td class="text-success" align="right"><i class="fa fa-user-circle"></i> Last Name</td>
+        <td>{{modelMerchant.lastname}}</td>
+      </tr>
+      <tr>
+        <td class="text-success" align="right"><i class="fa fa-mobile"></i> Mobile Number</td>
+        <td>{{modelMerchant.phone}}</td>
+      </tr>
+      <tr>
+        <td class="text-success" align="right"><i class="fa fa-envelope"></i> E-Mail ID</td>
+        <td>{{modelMerchant.email}}</td>
+      </tr>
+        
+      
+      </tbody>
+    </table>
+    <button type="submit" class="button" routerLink="/home" (click)="clearLocal()">Logout</button>
+    <button type="submit" id="btn" class="button" routerLink="/merchantMenu">Alter Menu</button>
+  </div>
+</div>
+</div>
+</body>
+

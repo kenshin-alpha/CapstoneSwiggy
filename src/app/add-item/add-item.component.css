@@ -1,0 +1,133 @@
+
+
+ input{
+  text-align: center;
+}
+
+body{
+  background-image: url("../../assets/images/bg8.jpg");
+  height: 600px;
+}
+
+p{
+  margin-left: 0%;
+  font-family: cursive;
+}
+
+.text-success{
+  font-family: cursive;
+}
+
+#btn{
+  margin-left: 0%;
+}
+
+#file{
+  cursor: pointer;
+}
+
+#txt{
+  font-family: cursive;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn{
+  background: linear-gradient(
+135deg
+, #000000 0%, #818181 100%);
+padding: 5px;
+font-family: cursive;
+color: whitesmoke;
+font-size: large;
+width: 180px;
+border: none;
+cursor: pointer;
+border-radius: 10px;
+}
+
+
+
+.card{
+  background-image: url("../../assets/images/bg8.jpg");
+}
+
+.table{
+  margin: auto;
+  
+  margin-left: 40px;
+  border-spacing: 0 15px;
+  height: 560px;
+}
+
+img{
+  width: 20%;
+  align-self: center;
+}
+
+.align-contents{
+  background-color: #393939;
+  width: 100%;
+}
+
+
+td{
+  border-top: 0px;
+  color: #FFFFFF;
+}
+font{
+  color: #FFFFFF;
+  font-size: 3vw;
+}
+.welcome{
+  color: white;
+}
+
+label {
+  font: bold 20px Helvetica, sans-serif;
+  display: block;
+  float: left;
+  text-align: right;
+  padding: 5px 10px 0 0;
+  width: 140px;
+}
+
+
+.align-submit{
+  display: block;
+}
+
+.button{
+  background: linear-gradient(
+135deg
+, #000000 0%, #aba2b1 100%);
+  padding: 15px;
+  font-family: cursive;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 20px;
+  width: 190px;
+  letter-spacing: .11rem;
+  margin-left: -20%;
+}
+
+.button:hover
+{
+transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px #38373785;
+cursor: pointer;
+}
+
+#btn{
+  float: left;
+  margin-left: 15%;
+}
+
+#btn1{
+  float:right;
+  
+  margin-left: 100px;
+}
